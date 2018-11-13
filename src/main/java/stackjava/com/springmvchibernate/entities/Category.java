@@ -12,6 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.Type;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -25,6 +26,7 @@ public class Category {
 	private String categoryname;
 	
     @Lob
+    @Type(type="org.hibernate.type.PrimitiveByteArrayBlobType")
     @Column(name = "categoryimage")
     private byte[] categoryimage;
     
