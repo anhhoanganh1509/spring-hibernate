@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "category")
+@Table(name = "public.category")
 public class Category {
 	@Id
 	@Column(name = "categoryid")
