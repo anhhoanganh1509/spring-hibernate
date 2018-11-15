@@ -292,7 +292,7 @@ public class CustomerController {
 	
 	@RequestMapping(value="/customerProductCart/{id}", method = RequestMethod.GET)
 	public String customerProductCart(@PathVariable Integer id, Model model,
-			HttpServletRequest request, Integer offset, Integer maxResults) {
+			HttpServletRequest request, Integer offset, Integer maxResults) {		
 		Product p = null;
 		if (id != null) {
 			p = productService.findProduct(id);

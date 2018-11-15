@@ -19,9 +19,9 @@
 							</c:forEach>							
 						</ul></li>
 					<li><a href="#"> ĐỒ BÓNG RỔ</a></li>
-					<li><a href="#">ĐỒ BƠI LỘI</a></li>
 					<li><a href="#">THÔNG TIN</a></li>
 					<li><a href="#">KHUYẾN MÃI</a></li>
+					<li><a href="${root }/checkoutProductCart">THANH TOÁN</a></li>
 					<li><a href="${root}/login">ĐĂNG NHẬP</a></li>
 				</ul>
 				<script type="text/javascript" src="${root}/js/nav.js"></script>
@@ -31,7 +31,7 @@
 	<div class="header-bottom-in">
 		<div class="container">
 			<div class="header-bottom-on">
-				<p class="wel"><a href="#">Welcome visitor you can login or create an account.</a></p>
+				<p class="wel"><a href="#">Rất hân hạnh được phục vụ quý khách.</a></p>
 				<div class="header-can">
 					<div class="search">
 						<form>
@@ -44,7 +44,7 @@
 						<ul class="icon1 sub-icon1">							
 							<li><div class="cart">
 									<a href="#" class="cart-in"> </a>
-									<span> 0</span>
+									<span> ${myCart.quantityTotal}</span>
 								</div>
 								<ul class="sub-icon1 list">
 									<h3 style="text-align: center;">Đã chọn  sản phẩm</h3>

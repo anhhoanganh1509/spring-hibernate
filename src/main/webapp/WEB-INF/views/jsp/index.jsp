@@ -1,31 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page session="true"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Shop Hoàng Anh Sport</title>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
-<link href="${root}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="${root}/css/bootstrap.css">
 <script src="${root}/js/jquery.min.js"></script>
-<link href="${root}/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript">
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
+<link rel="stylesheet" type="text/css" href="${root}/css/style.css">
+
 <script type="text/javascript" src="${root}/js/move-top.js"></script>
 <script type="text/javascript" src="${root}/js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event) {
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop : $(this.hash).offset().top
-			}, 1000);
-		});
-	});
-</script>
-<link rel="stylesheet" href="${root}/css/etalage.css">
+
+<link rel="stylesheet" type="text/css" href="${root}/css/etalage.css">
 <script src="${root}/js/jquery.etalage.min.js"></script>
 		<script>
 			jQuery(document).ready(function($){
@@ -54,77 +40,6 @@
 	});
 </script>
 
-<script>
-	$(document).ready(function(c) {
-		$('.alert-close').on('click', function(c) {
-			$('.message').fadeOut('slow', function(c) {
-				$('.message').remove();
-			});
-		});
-	});
-</script>
-<script>
-	$(document).ready(function(c) {
-		$('.alert-close1').on('click', function(c) {
-			$('.message1').fadeOut('slow', function(c) {
-				$('.message1').remove();
-			});
-		});
-	});
-</script>
-	
-<script>
-    function getHuyen() {
-    $.ajax({
-        async: false,
-        url: "CartServlet",
-        type: "POST",
-        dataType: "json",
-        data: {            
-            'isAction': "getHuyenTP",
-            'tinhTPId': $("#diaChiTinhId").val()           
-        },      
-        success: function(results) {        	
-            var htmlCombo = "<option value='0'>Ch&#7885;n Qu&#7853;n/Huy&#7879;n</option>";
-            var htmlCombo1 = "<option value='0'>Ch&#7885;n x&atilde;</option>";
-            $.each(results, function(key, value) {
-            	if(value.key!="value") {
-                	htmlCombo += "<option value='" + value.id + "'>"+ value.name + "</option>";
-            	}
-            });
-            $('#diaChiHuyenId').html(htmlCombo);
-            $('#diaChiXaId').html(htmlCombo1); 
-        },
-        error: function () {
-            console.log("Error");
-        }
-    });
-}    
-function getXa() {
-    $.ajax({
-        async: false,
-        url: "CartServlet",
-        type: "POST",
-        dataType: "json",
-        data: {            
-            'isAction': "getXaTP",
-            'huyenTPId': $("#diaChiHuyenId").val()           
-        },      
-        success: function(results) {        	
-            var htmlCombo = "<option value='0'>Ch&#7885;n x&atilde;</option>";
-            $.each(results, function(key, value) {
-            	if(value.key!="value") {
-                	htmlCombo += "<option value='" + value.id + "'>"+ value.name + "</option>";
-            	}
-            });
-            $('#diaChiXaId').html(htmlCombo);     
-        },
-        error: function () {
-            console.log("Error");
-        }
-    });
-}     
-</script>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>

@@ -9,7 +9,7 @@
 <script src="${root}/js/jquery.min.js"></script>
 <script src="${root}/js/bootstrap.min.js"></script> 
 <link rel="stylesheet" href="${root}/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="${root}/css/stylelogin.css"/>
+<link rel="stylesheet" type="text/css" href="${root}/css/stylelogin.css"/>
 </head>
 <body>
 	<div class="login-form">		

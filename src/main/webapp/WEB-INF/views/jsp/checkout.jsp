@@ -8,11 +8,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
 
-<link href="${root}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="${root}/css/bootstrap.css">
 
 <script src="${root}/js/jquery.min.js"></script>
 
-<link href="${root}/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="${root}/css/style.css">
 
 <script>
     function getHuyen() {
