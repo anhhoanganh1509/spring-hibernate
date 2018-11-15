@@ -28,15 +28,7 @@ public class Donvihanhchinh {
 		super();
 	}
 
-	public Donvihanhchinh(int id, String ma, String ten, int daxoa, String chaid) {
-		super();
-		this.id = id;
-		this.ma = ma;
-		this.ten = ten;
-		this.daxoa = daxoa;
-		this.chaid = chaid;
-	}
-
+	
 	public int getId() {
 		return id;
 	}
@@ -69,9 +61,11 @@ public class Donvihanhchinh {
 		this.daxoa = daxoa;
 	}
 
+
 	public String getChaid() {
 		return chaid;
 	}
+
 
 	public void setChaid(String chaid) {
 		this.chaid = chaid;

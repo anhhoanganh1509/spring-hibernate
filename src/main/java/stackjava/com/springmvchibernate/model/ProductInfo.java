@@ -6,7 +6,7 @@ public class ProductInfo {
 	private int productId;
 	private int productPrice;
 	private String name;
-	private String sanid;
+	private int sanid;
 	public ProductInfo(int productId, int productPrice) {
 		super();
 		this.productId = productId;
@@ -28,10 +28,10 @@ public class ProductInfo {
 		this.productPrice = productPrice;
 	}
 	
-	public String getSanid() {
+	public int getSanid() {
 		return sanid;
 	}
-	public void setSanid(String sanid) {
+	public void setSanid(int sanid) {
 		this.sanid = sanid;
 	}
 	public String getName() {

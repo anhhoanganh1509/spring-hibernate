@@ -27,7 +27,7 @@ public class ProductDao {
 	public List<Product> findAll(Integer offset, Integer maxResults) {
 		Session session = this.sessionFactory.getCurrentSession();							
 		return session.createQuery("FROM "+Product.class.getName()
-				+" where  sanid is not null and  daxoa = 0 order by productid desc", Product.class)
+				+" where daxoa = 0 order by productid desc", Product.class)
 				.setFirstResult(offset!=null?offset:0)
 				.setMaxResults(maxResults!=null?maxResults:12)
 				.getResultList();		
@@ -36,7 +36,7 @@ public class ProductDao {
 	public Long count() {
 		Session session = this.sessionFactory.getCurrentSession();	
 		String sql = "Select count(o.productid) from " 
-		+ Product.class.getName() + " o where o.sanid is not null and o.daxoa = 0";
+		+ Product.class.getName() + " o where o.daxoa = 0";
 		Long value = (Long)session.createQuery(sql).uniqueResult();    
         if (value == null) {
             return 0L;
@@ -79,7 +79,7 @@ public class ProductDao {
 	public List<Product> customerProduct(Integer offset, Integer maxResults, int chaid) {
 		Session session = this.sessionFactory.getCurrentSession();							
 		return session.createQuery("FROM "+Product.class.getName()
-				+" where sanid is not null and  daxoa = 0 and chaid = "+chaid+" order by productid desc", Product.class)
+				+" where daxoa = 0 and chaid = "+chaid+" order by productid desc", Product.class)
 				.setFirstResult(offset!=null?offset:0)
 				.setMaxResults(maxResults!=null?maxResults:12)
 				.getResultList();		
@@ -88,7 +88,7 @@ public class ProductDao {
 	public Long count_customerProduct(int chaid) {
 		Session session = this.sessionFactory.getCurrentSession();	
 		String sql = "Select count(o.productid) from " 
-		+ Product.class.getName() + " o where o.sanid is not null and o.daxoa = 0 and o.chaid = "+chaid+" ";
+		+ Product.class.getName() + " o where and o.daxoa = 0 and o.chaid = "+chaid+" ";
 		Long value = (Long)session.createQuery(sql).uniqueResult();    
         if (value == null) {
             return 0L;

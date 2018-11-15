@@ -56,8 +56,23 @@ public class Category {
 		
 	}
 
+
+
+	public String getChaid() {
+		return chaid;
+	}
+
+
+
+	public void setChaid(String chaid) {
+		this.chaid = chaid;
+	}
+
+
+
 	public Category(int categoryid, String categoryname, byte[] categoryimage, String chaid, Date ngaytao,
-			String nguoitao, Date ngaysua, String nguoisua, int daxoa) {
+			String nguoitao, Date ngaysua, String nguoisua, int daxoa, List<Product> productList) {
+		super();
 		this.categoryid = categoryid;
 		this.categoryname = categoryname;
 		this.categoryimage = categoryimage;
@@ -67,15 +82,10 @@ public class Category {
 		this.ngaysua = ngaysua;
 		this.nguoisua = nguoisua;
 		this.daxoa = daxoa;
+		this.productList = productList;
 	}
 
-	public String getChaid() {
-		return chaid;
-	}
 
-	public void setChaid(String chaid) {
-		this.chaid = chaid;
-	}
 
 	public int getCategoryid() {
 		return categoryid;

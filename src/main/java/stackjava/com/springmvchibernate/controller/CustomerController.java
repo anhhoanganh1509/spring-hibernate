@@ -235,6 +235,8 @@ public class CustomerController {
     				json.put("id", c.getCategoryid());
     				json.put("name", c.getCategoryname());
     				jsonResult.put(json);
+    				response.setContentType("application/json");
+    				response.setCharacterEncoding("UTF-8");
     			}
     			response.getWriter().write(jsonResult.toString());
     		}
@@ -262,6 +264,8 @@ public class CustomerController {
 				json.put("id", c.getId());
 				json.put("name", c.getTen());
 				jsonResult.put(json);
+				response.setContentType("application/json");
+				response.setCharacterEncoding("UTF-8");
 			}
 			response.getWriter().write(jsonResult.toString());    		
         }catch(Exception ex) {

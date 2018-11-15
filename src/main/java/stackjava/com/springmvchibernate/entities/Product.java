@@ -23,15 +23,13 @@ public class Product {
 	@JoinColumn(name = "productma")
 	private Category category;
 	
-	@Column(name = "productname")
-	private String productname;
 	
     @Lob
     @Column(name = "productimage")
     private byte[] productimage;
 
     @Column(name = "sanid")
-	private String sanid;
+	private int sanid;
 
     @Column(name = "productprice")
 	private int productprice;
@@ -87,14 +85,6 @@ public class Product {
 		this.category = category;
 	}
 
-	public String getProductname() {
-		return productname;
-	}
-
-	public void setProductname(String productname) {
-		this.productname = productname;
-	}
-
 	public byte[] getProductimage() {
 		return productimage;
 	}
@@ -103,11 +93,12 @@ public class Product {
 		this.productimage = productimage;
 	}
 	
-	public String getSanid() {
+	
+	public int getSanid() {
 		return sanid;
 	}
 
-	public void setSanid(String sanid) {
+	public void setSanid(int sanid) {
 		this.sanid = sanid;
 	}
 

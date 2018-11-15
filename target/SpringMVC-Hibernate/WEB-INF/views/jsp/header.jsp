@@ -31,7 +31,7 @@
 	<div class="header-bottom-in">
 		<div class="container">
 			<div class="header-bottom-on">
-				<p class="wel"><a href="#">Chào mừng bạn đến với shop của chúng tôi.</a></p>
+				<p class="wel"><a href="#">Rất hân hạnh được phục vụ quý khách.</a></p>
 				<div class="header-can">
 					<div class="search">
 						<form>
