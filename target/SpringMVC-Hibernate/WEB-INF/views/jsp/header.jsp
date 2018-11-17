@@ -33,13 +33,7 @@
 			<div class="header-bottom-on">
 				<p class="wel"><a href="#">Rất hân hạnh được phục vụ quý khách.</a></p>
 				<div class="header-can">
-					<div class="search">
-						<form>
-							<input type="text" value="Search" onfocus="this.value = '';"
-								onblur="if (this.value == '') {this.value = '';}"> 
-							<!-- <input type="submit" value=""> -->
-						</form>
-					</div>
+					
 					<div class="header-in">
 						<ul class="icon1 sub-icon1">							
 							<li><div class="cart">

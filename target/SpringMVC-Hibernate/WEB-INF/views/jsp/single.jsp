@@ -17,7 +17,7 @@
 						<div class="single-para">								
 								<div class="para-grid">
 									<span  class="add-to">${customerProductSingle.productprice}.000 VNĐ</span>
-									<a href="${root}/customerProductCart/${customerProductSingle.productid}" class="hvr-shutter-in-vertical cart-to">Thêm Giỏ Hàng</a>					
+									<a href="${root}/customerProductCart/${customerProductSingle.productid}/${forward}" class="hvr-shutter-in-vertical cart-to">Thêm Giỏ Hàng</a>					
 									<div class="clearfix"></div>
 								 </div>
 								 <h5>${customerProductSingle.category.categoryname}</h5>	

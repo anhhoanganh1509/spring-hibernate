@@ -88,7 +88,7 @@ public class ProductDao {
 	public Long count_customerProduct(int chaid) {
 		Session session = this.sessionFactory.getCurrentSession();	
 		String sql = "Select count(o.productid) from " 
-		+ Product.class.getName() + " o where and o.daxoa = 0 and o.chaid = "+chaid+" ";
+		+ Product.class.getName() + " o where o.daxoa = 0 and o.chaid = "+chaid+" ";
 		Long value = (Long)session.createQuery(sql).uniqueResult();    
         if (value == null) {
             return 0L;

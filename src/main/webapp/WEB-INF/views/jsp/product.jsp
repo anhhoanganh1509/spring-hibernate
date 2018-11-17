@@ -54,7 +54,7 @@
 				<c:forEach var="c" items="${listCustomerProduct}" varStatus="itr">					
 					<div class="col-md-3 md-col">
 						<div class="col-md">
-							<a href="${root}/customerProductSingle/${c.productid}" class="compare-in"> 
+							<a href="${root}/customerProductSingle/${c.productid}/${id}" class="compare-in"> 
 								<img src="${root}/productImage?id=${c.productid}">
 								<div class="compare">
 									<span>Chi Tiết</span>
@@ -70,10 +70,10 @@
 									</c:if>
 								</h5>
 								<div class="white">
-									<a href="${root}/customerProductCart/${c.productid}"
+									<a href="${root}/customerProductCart/${c.productid}/${id}"
 										class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">Thêm Giỏ Hàng</a>
 									<p class="dollar">
-										<span>2</span><span>0</span><span class="in-dollar">vnđ</span>
+										<span>${c.productprice}</span><span class="in-dollar">vnđ</span>
 									</p>
 									<div class="clearfix"></div>
 								</div>
